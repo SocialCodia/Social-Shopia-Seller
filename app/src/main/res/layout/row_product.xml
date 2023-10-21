@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:id="@+id/productImageIcon"
+        android:padding="5dp"
+        android:src="@drawable/store"
+        app:civ_border_color="@color/colorPrimaryDark"
+        app:civ_border_width="1dp"/>
+
+    <TextView
+        android:id="@+id/tvProductDiscountNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10% Off"
+        android:padding="5dp"
+        android:background="@drawable/text_background"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/productImageIcon" />
+
+    <TextView
+        android:id="@+id/tvProductTitle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/productImageIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductDiscountNote" />
+
+    <TextView
+        android:id="@+id/tvProductQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Kg"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/productImageIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductTitle" />
+
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$20"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/productImageIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductQuantity" />
+
+    <TextView
+        android:id="@+id/tvProductDiscountPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvProductPrice"
+        app:layout_constraintStart_toEndOf="@+id/tvProductPrice"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductQuantity" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_keyboard_arrow_right"
+        app:layout_constraintBottom_toBottomOf="@+id/productImageIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toTopOf="@+id/productImageIcon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
